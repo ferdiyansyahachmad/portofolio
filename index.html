@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portofolio - Ferdiyansyah Achmad</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config -->
+  <style>
+.glow-effect {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.9;
+  background-color: #573bf6; /* Tailwind Blue-500 */
+  background-image: 
+    radial-gradient(at 85% 51%, rgba(147, 197, 253, 1) 0px, transparent 50%), /* Blue-300 */
+    radial-gradient(at 74% 68%, rgba(96, 165, 250, 1) 0px, transparent 50%),  /* Blue-400 */
+    radial-gradient(at 64% 79%, rgba(59, 130, 246, 1) 0px, transparent 50%),  /* Blue-500 */
+    radial-gradient(at 75% 16%, rgba(37, 99, 235, 1) 0px, transparent 50%),   /* Blue-600 */
+    radial-gradient(at 90% 65%, rgba(29, 78, 216, 1) 0px, transparent 50%),   /* Blue-700 */
+    radial-gradient(at 91% 83%, rgb(69, 30, 175) 0px, transparent 50%),   /* Blue-800 */
+    radial-gradient(at 72% 91%, rgb(80, 30, 138) 0px, transparent 50%);   /* Blue-900 */
+  z-index: -1;
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+
+    @keyframes glowPulse {
+      0%, 100% {
+        filter: brightness(1);
+        opacity: 1;
+      }
+      50% {
+        filter: brightness(1.5);
+        opacity: 0.8;
+      }
+    }
+
+    .animate-glow {
+      animation: glowPulse 3s ease-in-out infinite;
+    }
+
+    .bg-wave-gradient-1 {
+      background: linear-gradient(135deg, #733bf6, #60a5fa);
+    }
+
+    .bg-wave-gradient-2 {
+      background: linear-gradient(135deg, #8e60fa, #749ffd);
+    }
+
+    .bg-wave-gradient-3 {
+      background: linear-gradient(135deg, #7706d4, #67e8f9);
+    }
+
+.loader {
+  color: rgb(202, 201, 201);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  box-sizing: content-box;
+  height: 40px;
+  display: flex;
+  border-radius: 8px;
+}
+
+.words {
+  overflow: hidden;
+  position: relative;
+  height: 40px;
+}
+
+.words::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--bg-color) 10%,
+    transparent 30%,
+    transparent 70%,
+    var(--bg-color) 90%
+  );
+  z-index: 20;
+}
+
+.word {
+  display: block;
+  height: 100%;
+  padding-left: 6px;
+  color: #956afa;
+  animation: spin_slow 10s infinite;
+}
+
+@keyframes spin_slow {
+  0% {
+    transform: translateY(0%);
+  }
+  20% {
+    transform: translateY(0%);
+  }
+
+  25% {
+    transform: translateY(-100%);
+  }
+  45% {
+    transform: translateY(-100%);
+  }
+
+  50% {
+    transform: translateY(-200%);
+  }
+  70% {
+    transform: translateY(-200%);
+  }
+
+  75% {
+    transform: translateY(-300%);
+  }
+  95% {
+    transform: translateY(-300%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+  </style>
+
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+  <!-- Header -->
+  <header class="bg-gray-800 shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-blue-400">Ferdy</h1>
+      <nav class="space-x-6">
+        <a href="#home" class="text-gray-300 hover:text-blue-400">Home</a>
+        <a href="#tentang" class="text-gray-300 hover:text-blue-400">Tentang</a>
+        <a href="#portofolio" class="text-gray-300 hover:text-blue-400">Portofolio</a>
+        <a href="#kontak" class="text-gray-300 hover:text-blue-400">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center px-3 gap-40 relative overflow-hidden">
+    
+    <div class="text-center md:text-left z-10">
+      <h2 class="text-4xl font-bold text-gray-200 mb-4">Hello, I'm</h2>
+      <h1 class="text-5xl font-extrabold text-blue-400 mb-4">Ferdiyansyah Achmad</h1>
+      
+  <div class="loader">
+    <p>And I'm</p>
+    <div class="words">
+      <span class="word">Full-Stack Web Developer</span>
+      <span class="word">Backend & API Specialist</span>
+      <span class="word">API & Database Designer</span>
+      <span class="word">Cloud Computing Enthusiast</span>
+    </div>
+      </div>
+    </div>
+
+    <div class="relative w-64 h-64 z-10 -mt-24">
+      <div class="glow-effect top-0 right-0 w-[320px] h-[300px] z-[-1] -translate-x-0"></div>
+      <div class="glow-effect top-0 left-0 w-[320px] h-[300px] z-[-1] -translate-x-0"></div>
+
+      <!-- Genangan bawah paling bawah -->
+      <div class="absolute top-[85px] right-[-2px] w-[260px] h-[320px] rounded-full z-0 bg-wave-gradient-1 animate-glow"></div>
+
+      <!-- Genangan air atas -->
+      <div style="border-radius: 60% 40% 50% 70% / 60% 30% 70% 40%;"
+           class="absolute -top-2 -left-10 w-[290px] h-[200px] z-0 animate-irregular animate-glow bg-wave-gradient-2"></div>
+
+      <!-- Genangan tengah -->
+      <div style="border-radius: 50% 50% 60% 40% / 50% 60% 40% 50%;"
+           class="absolute top-5 left-20 w-[220px] h-[180px] z-0 animate-irregular animate-glow bg-wave-gradient-1"></div>
+
+      <!-- Genangan bawah kiri -->
+      <div style="border-radius: 70% 30% 60% 40% / 60% 40% 60% 40%;"
+           class="absolute top-20 -left-6 w-[280px] h-[160px] z-0 animate-irregular animate-glow bg-wave-gradient-3"></div>
+
+      <!-- Gambar -->
+      <img src="image/foto-ferdy.png" alt="Foto Ferdiyansyah Achmad"
+           class="relative w-[400px] h-[400px] object-cover rounded-full z-10">
+    </div>
+    
+  </section>
+
+</body>
+</html>
